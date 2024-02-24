@@ -14,3 +14,10 @@ datasource db {
   url  	    = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
+
+
+model Curso{
+  id   String @id @default(uuid())
+  nome String
+  ultima_grade String @default("2023.2")
+}
